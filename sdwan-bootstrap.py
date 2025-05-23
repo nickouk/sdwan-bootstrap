@@ -21,7 +21,7 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 username = input("Enter your vManage username: ")
 password = pwinput("Enter your vManage password: ")
 
-vmanage_host = "https://vmanage-171203704.sdwan.cisco.com/"
+vmanage_host = "https://vmanage-2044406.sdwan.cisco.com/"
 
 print(f"\nConnecting to vManage...\n")
 
@@ -66,11 +66,11 @@ except:
 # Prompt for list of serial numbers
 
 serials = set()
-serial = ''
+serial = 'anytext'
 
-while serial != '':
+while len(serial) >0:
     serial = input('Enter a serial number or leave blank to continue: ')
-    if serial != None:
+    if len(serial) >0:
         serials.add(serial)
 
 # Get the device inventory
